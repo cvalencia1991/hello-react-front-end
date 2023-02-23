@@ -17,6 +17,6 @@ export default function greeterReducer(state = {}, action){
 export const getGreeter = createAsyncThunk(GET_GREETER, async () => {
     const response = await fetch('http://127.0.0.1:3000/api/v1/greetings');
     const data = await response.json();
-    return data
+    return data.message
     }
 );
